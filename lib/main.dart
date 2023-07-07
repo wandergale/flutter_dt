@@ -25,6 +25,28 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Aplicativo"),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.network("https://ichef.bbci.co.uk/news/800/cpsprodpb/15E02/production/_104620698_prmo_imc_br-nc.png"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                labelText: "Nome",
+                border: OutlineInputBorder()
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
